@@ -9,6 +9,13 @@ namespace valyuta
        private string req { get; set; } = "https://www.cbar.az/currencies/";
 
 
+        public async Task<string> GetXml()
+        {
+            HttpClient Client = new();
+            var a = await Client.GetStringAsync(req + DateTime.Now.ToString().Split()[0] + ".xml");
+            return a;
+        }
+
         public async Task<ValCurs> Get()
         {
             HttpClient Client = new();

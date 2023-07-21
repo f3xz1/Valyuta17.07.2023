@@ -3,7 +3,6 @@
 [XmlRoot(ElementName = "ValCurs")]
 public class ValCurs
 {
-
     [XmlElement(ElementName = "ValType")]
     public List<ValType> ValType { get; set; }
 
